@@ -1,0 +1,151 @@
+package main
+
+import (
+	"fmt"
+
+	// "github.com/mitchellh/copystructure"
+	// "github.com/go-playground/locales/my"
+	// "golang.org/x/text/width"
+	// "time"
+	// "math"
+)
+
+// type fn func()
+
+// func doSomething() {
+// 	fmt.Println("doing")
+// }
+
+// func onComplete() {
+// 	fmt.Println("completed")
+// }
+
+// func worker (a, b fn) {
+// 	a()
+// 	a()
+
+// 	b()
+
+// }
+
+type rect struct {
+	width, height int
+}
+
+func (r *rect) area() int {
+	r.height = -10
+	r.width = 6
+	return r.height * r.width
+}
+
+func (r rect) perim() int {
+	r.width = 2
+	r.height = 8
+	return 2*r.width * r.height
+}
+
+type person struct {
+	name string
+	age int
+}
+
+func newPerson(name string) person {
+	var p person
+	p.name = name
+	p.age = 28
+	return p
+}
+
+func main() {
+	// fmt.Println("Hello world")
+	// fmt.Println("1 + 1 = ", 1 + 1)
+	// var d  = 64
+	// fmt.Printf("%T\n", d)
+	// const n int32 = 1e9 + 10
+	// fmt.Println(int64(n))
+	// fmt.Println(math.Asin(-1))
+
+	// for i := 0; i <= 20; i++ {
+	// 	if (i == 10) {
+	// 		break
+	// 	}
+	// 	i += 1
+	// 	fmt.Println(i)
+	// }
+	// var cnt = 0
+	// for {
+	// 	if (cnt == 5) {
+	// 		break
+	// 	}
+	// 	cnt += 1
+	// 	fmt.Println("loop")
+	// }
+
+	// switch time.Now().Weekday() {
+	// case time.Sunday:
+	// 	fmt.Println("Sunday")
+	// default:
+	// 	fmt.Println(time.Now().Day())
+	// 	fmt.Println("default")
+	// }
+
+	// whatAmI := func (i interface{}) {
+	// 	switch t := i.(type) {
+	// 	case bool:
+	// 		fmt.Println("some bool")
+	// 	case int:
+	// 		fmt.Println("some int")
+	// 	default:
+	// 		fmt.Printf("unknown %T\n", t)
+	// 	}
+	// }
+	// whatAmI(true)
+	// whatAmI(100)
+
+	// worker(doSomething, onComplete)
+	// s := make([]string, 5)
+	// var t1, t2, t3 string
+	// fmt.Printf("t1: %p\nt2: %p\nt3: %p\n", &t1, &t2, &t3)
+	// s[0] = "a"
+	// s[1] = "b"
+	// s[3] = "b"
+	// s[4] = "c"
+	// s[2] = "c"
+	// fmt.Println("s: ", s)
+	// fmt.Printf("s addr: %p\n", &s)
+	// l := make([]string, 3)
+	// copy(l, s[2:5])
+	// l[1] = "D"
+	// fmt.Println(l, s)
+	// nums := []int{2, 3, 4}
+	// for _, num := range nums {
+	// 	fmt.Println(num)
+	// }
+
+	// kvs := map[string]string{"b": "banana"}
+	// kvs["a"] = "apple"
+	// fmt.Println(kvs["b"])
+	a := 1
+	b := 2
+	fmt.Printf("%p\n%p\n", &a, &b)
+	myRect := rect{width: 3, height: 5}
+	fmt.Printf("%p\n", &myRect)
+
+	anotherRect := make([]rect, 1)
+	anotherRect[0].width = 3
+	anotherRect[0].height = 5
+	fmt.Println(anotherRect[0])
+	fmt.Printf("%p\n", &anotherRect)
+
+	// fmt.Println(myRect)
+	// fmt.Println(myRect.area())
+	// fmt.Println(myRect)
+	// fmt.Println(myRect.perim())
+	// fmt.Println(myRect)
+	
+	// x := newPerson("mahdi")
+	// // y.age = 12
+	// // fmt.Println(x)
+	// fmt.Printf("----%p\n", &x)
+
+}
