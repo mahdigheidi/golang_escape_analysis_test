@@ -1,0 +1,14 @@
+addr a: 0xc00012a000
+addr b: 0xc00012a008
+addr c: 0xc00011c018
+addr of rect object allocated in stack: 0xc00012a020
+[{3 5}]
+addr of rect object allocated with make in heap: 0xc00011c030
+{3 5}
+-60
+The struct sent to perim(): {6 -10}
+The struct in perim(): {2 8}
+32
+The struct after being editted in perim(): {6 -10}
+main.person    0xc00011c060
+*main.person    0xc000124020

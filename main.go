@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-
+// struct rect, defines a rectangle
 type rect struct {
 	width, height int
 }
@@ -28,11 +28,14 @@ func (r rect) perim() int {
 	return 2*r.width * r.height
 }
 
+// struct person, defines a person
 type person struct {
 	name string
 	age uint32
 }
 
+
+// allocating a person struct in stack and returning the object
 func newPerson(name string, age uint32) person {
 	var p person
 	p.name = name
@@ -40,12 +43,8 @@ func newPerson(name string, age uint32) person {
 	return p
 }
 
+// allocating a person and returning the pointer to it
 func newPointerOfPerson(name string, age uint32) *person {
-	someGuy := person{name, age}
-	return &someGuy
-}
-
-func newPointerOfPersonWithVar(name string, age uint32) *person {
 	var p person
 	p.name = name
 	p.age = age
@@ -87,8 +86,6 @@ func main() {
 	
 	x := newPerson("mahdi", 22)
 	y := newPointerOfPerson("mahdi", 22)
-	z := newPointerOfPersonWithVar("mahdi", 22)
 	fmt.Printf("%T    %p\n", x, &x)
 	fmt.Printf("%T    %p\n", y, &y)
-	fmt.Printf("%T    %p\n", z, &z)
 }
