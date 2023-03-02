@@ -6,3 +6,6 @@ The escape analysis is one of the phases of the Go compiler. It analyses the sou
 We tried to test and analize Go behaviour in a few examples in class, in order to get deeper insight of call by reference, call by value, pointers and address alocation concepts in WebDev class.
 
 This repo contains the code and the result of that experiment.
+
+
+Viewer can run the code by executing `go run main.go` in the code directory.
